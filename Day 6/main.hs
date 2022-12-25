@@ -19,7 +19,6 @@ findIndex n acc str sub = let   p = take n str
                           in if p == sub then acc + n - 1
                                          else findIndex n (acc+1) (drop 1 str) sub 
 
-
 main = do input <- parseInput "input.txt"
           putStrLn ("Parte 1 : " ++ (show (findIndex 4 1 input  $ part 4 input)))
           putStrLn ("Parte 2 : " ++ (show (findIndex 14 1 input $ part 14 input)))
